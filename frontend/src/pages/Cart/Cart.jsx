@@ -9,6 +9,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   return (
+    
     <div className="cart">
       <div className="cart-items">
         <div className="cart-items-title">
