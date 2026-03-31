@@ -5,6 +5,9 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
+    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8080";
+    const USER_ID = "u1";
+
     const [cartItems, setCartItems] = useState(() => {
         try {
             const savedCart = localStorage.getItem("cartItems");
@@ -64,13 +67,20 @@ const StoreContextProvider = (props) => {
         return totalAmount;
     }
 
+    const clearCart = () => {
+        setCartItems({});
+    }
+
     const contextValue = {
+        BACKEND_URL,
+        USER_ID,
         food_list,
         cartItems,
         setCartItems,
         addToCart,
         removeFromCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        clearCart
     }
     return(
         <StoreContext.Provider value={contextValue}>

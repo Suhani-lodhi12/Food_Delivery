@@ -26,10 +26,65 @@
     display: flex;
     gap: 10px;
 }
-place-order-right{
+.place-order-right{
     width: 100%;
     max-width: max(40%,500px);
 }
 .place-order .cart-total button{
     margin-top: 30px;
+}
+
+.order-success-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.order-success-modal{
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
+}
+
+.order-success-modal h2{
+    margin: 0 0 12px;
+    color: #222;
+}
+
+.order-success-modal p{
+    margin: 8px 0;
+    color: #555;
+}
+
+.order-success-actions{
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.order-success-actions button{
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.order-success-actions button:first-child{
+    background: #f1f1f1;
+    color: #333;
+}
+
+.order-success-actions button:last-child{
+    background: tomato;
+    color: #fff;
 }
