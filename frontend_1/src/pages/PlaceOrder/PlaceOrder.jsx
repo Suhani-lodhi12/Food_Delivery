@@ -254,6 +254,13 @@ const PlaceOrder = () => {
               <button type="button" onClick={() => setSuccessInfo({ show: false, paymentId: "", orderId: "" })}>
                 Close
               </button>
+              <button
+                type="button"
+                onClick={() => navigate(`/order-status/${successInfo.orderId}`)}
+                disabled={!successInfo.orderId || successInfo.orderId === "-"}
+              >
+                Track Order
+              </button>
               <button type="button" onClick={() => navigate("/")}>
                 Go to Home
               </button>
